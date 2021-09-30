@@ -1,0 +1,67 @@
+.pins-container {
+	border: 4px solid var(--green);
+	grid-area: pins;
+}
+
+.pins-container.solid{
+	background: var(--green);
+	color: white;
+}
+
+table.pins {
+    margin: 0 auto;
+}
+
+table.pins td, table.pins th{
+    padding: 10px;
+	text-underline-offset: 4px;
+}
+
+/* Pin types */
+table.pins td.volt {
+	text-decoration: underline;
+	text-decoration-style: dashed;
+	text-decoration-color: var(--orange);
+}
+
+table.pins td.gpio {
+	text-decoration: underline;
+	text-decoration-style: dotted;
+	text-decoration-color: var(--purple);
+}
+
+table.pins td.ground {
+	text-decoration: underline;
+	text-decoration-style: solid;
+	text-decoration-color: var(--grey);
+}
+
+table.pins td.active {
+	font-weight: bold;
+}
+
+/* Pin layout */
+table.pins tbody tr:first-child td:nth-child(3) {
+    border-top: 2px solid #000;
+}
+
+table.pins tbody tr:first-child td:nth-child(4) {
+    border-top: 2px solid #000;
+}
+
+table.pins tr td:nth-child(3){
+    border-left: 2px solid #000;
+    text-align: right;
+}
+
+table.pins tr td:nth-child(4){
+    border-right: 2px solid #000;
+}
+
+table.pins tbody tr:last-child td:nth-child(3) {
+    border-bottom: 2px solid #000;
+}
+
+table.pins tbody tr:last-child td:nth-child(4) {
+    border-bottom: 2px solid #000;
+}

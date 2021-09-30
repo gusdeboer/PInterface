@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="https://www.raspberrypi.org/app/uploads/2020/06/cropped-raspberrry_pi_logo-100x100.png" sizes="32x32">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,600;0,900;1,300;1,400&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+
+    <title>pInterface</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="container pins-container">
+            <!-- https://www.theengineeringprojects.com/wp-content/uploads/2021/03/raspberry-pi-4.png -->
+            <table class="pins">
+                <thead>
+                    <tr>
+                        <th colspan="2"></th>
+                        <th colspan="2">Pins</th>
+                        <th colspan="2"></th>                   
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td class="volt">3V3</td>
+                        <td class=active>1</td>
+                        <td>2</td>
+                        <td class="volt">5V</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>SDA</td>
+                        <td class="gpio">GPIO 2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td class="volt">5V</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>SCL</td>
+                        <td class="gpio">GPIO 3</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td class="ground">Ground</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>GPCLK0</td>
+                        <td class="gpio active">GPIO 4</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td class="gpio">GPIO 14</td>
+                        <td>TXD</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="ground">Ground</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td class="gpio">GPIO 15</td>
+                        <td>RXD</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="gpio">GPIO 17</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td class="gpio">GPIO 18</td>
+                        <td>PCM_CLK</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="gpio">GPIO 27</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td class="ground">Ground</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="gpio">GPIO 22</td>
+                        <td>15</td>
+                        <td>16</td>
+                        <td class="gpio">GPIO 23</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="volt">3V3</td>
+                        <td>17</td>
+                        <td>18</td>
+                        <td class="gpio">GPIO 24</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>MOSI</td>
+                        <td class="gpio">GPIO 10</td>
+                        <td>19</td>
+                        <td>20</td>
+                        <td class="ground">Ground</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>MISO</td>
+                        <td class="gpio">GPIO 9</td>
+                        <td>21</td>
+                        <td>22</td>
+                        <td class="gpio">GPIO 25</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>SCLK</td>
+                        <td class="gpio">GPIO 11</td>
+                        <td>23</td>
+                        <td>24</td>
+                        <td class="gpio">GPIO 8</td>
+                        <td>CE0</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="ground">Ground</td>
+                        <td>25</td>
+                        <td>26</td>
+                        <td class="gpio">GPIO 7</td>
+                        <td>CE1</td>
+                    </tr>
+                    <tr>
+                        <td>ID_SD</td>
+                        <td class="gpio">GPIO 0</td>
+                        <td>27</td>
+                        <td>28</td>
+                        <td class="gpio">GPIO 1</td>
+                        <td>ID_SC</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="gpio">GPIO 5</td>
+                        <td>29</td>
+                        <td>30</td>
+                        <td class="ground">Ground</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="gpio">GPIO 6</td>
+                        <td>31</td>
+                        <td>32</td>
+                        <td class="gpio">GPIO 12</td>
+                        <td>PWM0</td>
+                    </tr>
+                    <tr>
+                        <td>PWM1</td>
+                        <td class="gpio">GPIO 13</td>
+                        <td>33</td>
+                        <td>34</td>
+                        <td class="ground">Ground</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>PCM_FS</td>
+                        <td class="gpio">GPIO 19</td>
+                        <td>35</td>
+                        <td>36</td>
+                        <td class="gpio">GPIO 16</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="gpio">GPIO 26</td>
+                        <td>37</td>
+                        <td>38</td>
+                        <td class="gpio">GPIO 20</td>
+                        <td>PCM_DIN</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="ground">Ground</td>
+                        <td>39</td>
+                        <td>40</td>
+                        <td class="gpio">GPIO 21</td>
+                        <td>PCM_DOUT</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="container log-container">
+            <table class="log">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th width="200">timestamp</th>   
+                        <th width="100">type</th>                   
+                        <th>message</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td width="10">></td>
+                        <td>[01-01-01 21:00:00]</td>
+                        <td>warning</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lacinia, ante id dapibus convallis, arcu lacus consequat tortor, nec cursus magna orci ut neque.</td>
+                    </tr>
+                    <tr>
+                        <td width="10">></td>
+                        <td>[01-01-01 21:00:00]</td>
+                        <td>warning</td>
+                        <td>Cras lacinia, ante id dapibus convallis, arcu lacus consequat tortor, nec cursus magna orci ut neque.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="container information-container">
+            <!-- https://www.booleanworld.com/guide-linux-top-command/ -->
+        </div>
+    </div>
+</body>
+
+</html>

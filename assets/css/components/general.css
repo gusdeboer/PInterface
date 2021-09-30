@@ -1,0 +1,21 @@
+html {
+    font-family: 'Source Code Pro', monospace;
+}
+
+.main {
+    margin: 0 auto;
+	display: grid;
+	grid-template-areas: 
+	"pins log"	
+	"pins information";
+    grid-template-rows: 60% 40%;
+    grid-template-columns: 40% 60%;
+    height: 100vh;
+}
+
+.container{
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    display: block;
+}

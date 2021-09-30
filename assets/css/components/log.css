@@ -1,0 +1,18 @@
+.log-container {
+	border: 4px solid var(--grey);
+	grid-area: log;
+}
+
+.log-container.solid {
+	background: var(--grey);
+	color: white;
+}
+
+table.log {
+	width: 100%;
+}
+
+table.log td, table.log th{
+    padding: 10px;
+	text-align: left;
+}

@@ -1,0 +1,8 @@
+@import url(components/reset.css);
+@import url(components/colors.css);
+
+@import url(components/general.css);
+
+@import url(components/pins.css);
+@import url(components/log.css);
+@import url(components/information.css);
