@@ -14,7 +14,7 @@
         href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,600;0,900;1,300;1,400&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
 
     <title>pInterface</title>
@@ -206,7 +206,7 @@
                         <th>message</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class="log-messages">
                     <tr>
                         <td width="10">></td>
                         <td>[01-01-01 21:00:00]</td>
@@ -221,11 +221,52 @@
                     </tr>
                 </tbody>
             </table>
+            <form id="form" action="">
+                <input id="input" autocomplete="off" /><button>Send</button>
+              </form>
         </div>
         <div class="container information-container">
+            <button class="led-on">Turn on</button>
+            <button class="led-off">Turn off</button>
             <!-- https://www.booleanworld.com/guide-linux-top-command/ -->
         </div>
     </div>
+    <script src="https://cdn.socket.io/4.3.2/socket.io.min.js" integrity="sha384-KAZ4DtjNhLChOB/hxXuKqhMLYvx3b5MlT55xPEiNmREKRzeEm+RVPlTnAn0ajQNs" crossorigin="anonymous"></script>
+    <script>
+    var socket = io();
+
+    document.querySelector('.led-on').addEventListener('click', ()=>{
+      socket.emit('led_on', input.value)
+  });
+
+  document.querySelector('.led-off').addEventListener('click', ()=>{
+      socket.emit('led_off', input.value)
+  });
+
+
+    var form = document.getElementById('form');
+  var input = document.getElementById('input');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    if (input.value) {
+      socket.emit('chat message', input.value);
+      input.value = '';
+    }
+  });
+
+  socket.on('chat message', function(msg) {
+
+    let current = new Date();
+let cDate = current.getFullYear() + '-' + (current.getMonth() + 1) + '-' + current.getDate();
+let cTime = current.getHours() + ":" + current.getMinutes() + ":" + current.getSeconds();
+let dateTime = cDate + ' ' + cTime;
+
+    let tr = document.createElement('tr');
+    tr.innerHTML = `<td>></td><td>[${dateTime}]</td><td>type</td><td>${msg}</td>`;
+    document.querySelector('.log-messages').appendChild(tr);
+  });
+    </script>
 </body>
 
 </html>
